@@ -1,0 +1,1 @@
+# kubernetes-liveproject-partial
