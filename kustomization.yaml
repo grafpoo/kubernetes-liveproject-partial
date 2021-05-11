@@ -1,0 +1,9 @@
+resources:
+- namespace.yaml
+- persistence.yaml
+- pg-config.yaml
+- pg-service.yaml
+- pg-deployment.yaml
+- app-config.yaml
+- app-deployment.yaml
+- app-service.yaml

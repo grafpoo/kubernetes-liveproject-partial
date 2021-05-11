@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restapi
+  namespace: liveproject
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: XXX
+  template:
+    metadata:
+      labels:
+        app: XXX
+    spec:
+      containers:
+        - name: restapi
+          image: grafpoo/restapi:latest
+          imagePullPolicy: "IfNotPresent"
+          envFrom:
+            - configMapRef:
+                name: XXX
+          resources:
+            limits:
+              memory: "1000Mi"
+            requests:
+              memory: "1000Mi"
